@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Lab02_zadanie
+{
+    class Fruit : Product
+    {
+        private int count;
+
+        public int Count
+        {
+            get => count;
+            set => count = value;
+        }
+
+        public Fruit(string name, int count)
+            :base(name)
+        {
+            this.count = count;
+        }
+
+        public override void Print(string prefix)
+        {
+            Console.WriteLine(prefix + $"{Name} ({Count} fruits)");
+
+        }
+    }
+}
